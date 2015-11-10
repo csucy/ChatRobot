@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CYrobot.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7F80E7EC1BEC345500B7EE82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F80E8051BEC345500B7EE82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F80E8101BEC345500B7EE82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cYl-iU-QJB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="a96-7E-84U">
+            <objects>
+                <navigationController id="cYl-iU-QJB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cr4-S7-dbA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vgb-yG-ecQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pN3-vD-wjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="353"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CYMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="voL-rH-bFM" userLabel="输入框">
+                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bottom_bg" translatesAutoresizingMaskIntoConstraints="NO" id="wog-VP-fk9" userLabel="背景">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-4C-zUG" userLabel="发送按钮">
+                                        <rect key="frame" x="562" y="8" width="30" height="30"/>
+                                        <state key="normal" title="发送"/>
+                                        <connections>
+                                            <action selector="sendBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ocN-9x-Pn0"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LmG-dY-huy" userLabel="文字框">
+                                        <rect key="frame" x="8" y="8" width="544" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="RxF-6j-Ola"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LmG-dY-huy" secondAttribute="bottom" constant="8" id="0lu-RX-crF"/>
+                                    <constraint firstAttribute="bottom" secondItem="wog-VP-fk9" secondAttribute="bottom" id="1NG-8n-WQb"/>
+                                    <constraint firstItem="wog-VP-fk9" firstAttribute="top" secondItem="voL-rH-bFM" secondAttribute="top" id="Bzd-5W-knS"/>
+                                    <constraint firstItem="sNG-4C-zUG" firstAttribute="leading" secondItem="LmG-dY-huy" secondAttribute="trailing" constant="10" id="GGj-rJ-SFf"/>
+                                    <constraint firstAttribute="bottom" secondItem="sNG-4C-zUG" secondAttribute="bottom" constant="8" id="Weo-pL-qpA"/>
+                                    <constraint firstItem="LmG-dY-huy" firstAttribute="leading" secondItem="voL-rH-bFM" secondAttribute="leading" constant="8" id="fzN-Ku-XOp"/>
+                                    <constraint firstItem="sNG-4C-zUG" firstAttribute="top" secondItem="voL-rH-bFM" secondAttribute="top" constant="8" id="ga6-pb-RAe"/>
+                                    <constraint firstAttribute="trailing" secondItem="sNG-4C-zUG" secondAttribute="trailing" constant="8" id="mVT-nl-zj5"/>
+                                    <constraint firstItem="LmG-dY-huy" firstAttribute="top" secondItem="voL-rH-bFM" secondAttribute="top" constant="8" id="s2i-Gm-RDH"/>
+                                    <constraint firstItem="wog-VP-fk9" firstAttribute="leading" secondItem="voL-rH-bFM" secondAttribute="leading" id="w6G-Am-TWA"/>
+                                    <constraint firstAttribute="height" constant="46" id="wkw-iG-Dq8"/>
+                                    <constraint firstAttribute="trailing" secondItem="wog-VP-fk9" secondAttribute="trailing" id="z1I-yJ-lEf"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lhl-0a-VnW" userLabel="表格">
+                                <rect key="frame" x="0.0" y="64" width="600" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TEi-j6-4hs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1Va-Ww-Kh4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="voL-rH-bFM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EQE-cn-DWa"/>
+                            <constraint firstAttribute="trailing" secondItem="Lhl-0a-VnW" secondAttribute="trailing" id="HPh-HR-tkE"/>
+                            <constraint firstAttribute="bottom" secondItem="voL-rH-bFM" secondAttribute="bottom" id="MD9-89-K4W"/>
+                            <constraint firstItem="Lhl-0a-VnW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="RlG-vM-Ggy"/>
+                            <constraint firstAttribute="trailing" secondItem="voL-rH-bFM" secondAttribute="trailing" id="hEN-tP-Hi7"/>
+                            <constraint firstItem="Lhl-0a-VnW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jff-QY-8dO"/>
+                            <constraint firstItem="voL-rH-bFM" firstAttribute="top" secondItem="Lhl-0a-VnW" secondAttribute="bottom" id="vsA-ci-9OY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jKr-xD-2Q4"/>
+                    <connections>
+                        <outlet property="footView" destination="voL-rH-bFM" id="0kX-Ny-Tfp"/>
+                        <outlet property="inputView" destination="LmG-dY-huy" id="LEl-KL-yoA"/>
+                        <outlet property="sendButten" destination="sNG-4C-zUG" id="ZiM-QP-x1N"/>
+                        <outlet property="tableView" destination="Lhl-0a-VnW" id="WR3-RL-Bjo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat_bottom_bg" width="10" height="42"/>
+    </resources>
+</document>
